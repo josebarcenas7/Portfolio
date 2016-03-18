@@ -1,0 +1,17 @@
+{% extends "template/base.html" %}
+{%block header%}
+<h1>Jose Barcenas</h1>
+<h2>{{title}}</h2>
+{%endblock%}
+
+{%block navigation%}
+ {% for url, caption in names%}
+ <li><a href = "{{url}}">{{caption}}<span class="sr-only">(current)</span></a></li>
+ {% endfor %}
+{%endblock%}
+
+{% block content %}
+	<p>
+		Welcome to Contacts
+  </p>
+{%endblock%}
