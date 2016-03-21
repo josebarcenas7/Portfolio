@@ -1,8 +1,4 @@
 {% extends "template/base.html" %}
-{%block header%}
-<h1>Jose Barcenas</h1>
-<h2>{{title}}</h2>
-{%endblock%}
 
 {%block navigation%}
  {% for url, caption in names%}
@@ -10,8 +6,115 @@
  {% endfor %}
 {%endblock%}
 
+{% block header %}
+<h1>{{title}}</h1>
+{%endblock%}
+
 {% block content %}
-<p>
-  Welcome to Projects
-</p>
+<!-- ****************~~~Sidebar~~~~************** -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-md-push-9 bd-sidebar">
+      <ul class="nav nav-pills head-menu">
+        <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true">About</a></li>
+        <li class=""><a href="#dcdc" data-toggle="tab" aria-expanded="false">Power Electronics</a></li>
+        <li class=""><a href="#silicon" data-toggle="tab" aria-expanded="false">Solid State</a></li>
+        <li class=""><a href="#vfead" data-toggle="tab" aria-expanded="false">Senior Capstone Project</a></li>
+        <li class=""><a href="#intel" data-toggle="tab" aria-expanded="false">Internships</a></li>
+        <li class=""><a href="#sm" data-toggle="tab" aria-expanded="false">Presentations</a></li>
+      </ul>
+    </div>
+
+    <!-- ****************~~~Conent~~~~************** -->
+    <div class="col-md-9 col-md-pull-3 bd-content">
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="home">
+          <h1>Projects</h1>
+          <p>My projects page includes work I’ve done for classes and internships.
+            The projects span a wide spectrum of disciplines, from software development
+            to silicon wafer processing</p>
+        </div>
+        <div class="tab-pane fade" id="dcdc">
+          <h2>DC-DC Power Converter</h2>
+          <h3>About</h3>
+          <p>
+            This project was a requirement for EECS 418 Power Electronics (include link to class website), with Prof. Heath Hoffman.</p>
+          </p>
+            Goal of this project was to design and assemble a PCB to be used as a switching-mode power supply. This project was developed in collaboration with FCA (include link) motors, they supplied the budget for the parts and the PCB Board, they also reviewed our design and provided guidance.
+            Technical Specs and Requirements
+            (include tech specs and requirements from FCA)
+          </p>
+          <p>
+            After the class ended, I redesigned the PCB to make it smaller and achieve the output current closer to 2 A. Testing is ongoing once I acquire a power supply and an electronic load unit.
+            (picture slide show)
+          </p>
+        </div>
+        <div class="tab-pane fade" id="silicon">
+          <h2>Silicon Wafer Processing</h2>
+          <h3>About</h3>
+          <p>
+            This project was a requirement for EECS 423 Solid State Device Laboratory with Professor Jerzy Kanicki
+            Goal of this project was to create a working n-type transistors on a silicon wafer. Fabrication labs were held in the Lurie Nanofabrication Facility (include link). Methods used included:
+          </p>
+          <ul>
+            <li>
+              Photolithography
+            </li>
+            <li>
+              Etching
+            </li>
+            <li>
+              Deposition
+            </li>
+            <li>
+              Oxidation
+            </li>
+            <li>
+              CVD/PVD
+            </li>
+          </ul>
+          </p>
+        </div>
+        <div class="tab-pane fade" id="vfead">
+          <h2>Variable Frequency Electro-Acoustic Device</h2>
+          <h3>About</h3>
+          <p>The project was a yearlong project for my senior design capstone course at
+            the University of North Texas. It was a major requirement for my Bachelors of
+            Science in Computer Engineering.
+            Our team researched solutions for Sensorineural hearing loss(SHL). We developed a hearing aid
+            that was capable of compensating the inaudible range of any user.
+            This could be achieved by having the user customize the settings of our device on first use.
+            Tech Specs
+            Insert BOM
+            (insert Slide Show)(Find way to imbed JPG on to site)
+          </p>
+        </div>
+        <div class="tab-pane fade" id="intel">
+          <h2>Thermal Power Validation Group, Metrology Capability Study</h2>
+          <h3>About</h3>
+          <p>
+          This project was my main assignment during my summer internship with Intel (include link).
+          I worked on a variety of Intel products, setting up test environments and running specific workloads to gather power and thermal data. I worked with python scripts to automate the processes.
+          <h3>Goals</h3>
+          Identify principal sources of variation; quantify and minimize their contribution to overall variability of power and thermal measurements performed on a TPV system
+          Quantify and compare total system-to-system variability for thermal and power measurements across multiple product segments/platforms (client and server)
+          Results and Details are under NDA
+          </p>
+        </div>
+        <div class="tab-pane fade" id="sm">
+          <h2>Smaller Projects</h2>
+          <p>
+            The following are slides from presentations I have given
+            <ul>
+              <li>Oceanography</li>
+              <li>X-Ray Imaging</li>
+              <li>Gallium Nitride Growth</li>
+              <li>GPU's and Autonomous vehicles</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {%endblock%}

@@ -15,7 +15,6 @@ class IndexHandler(webapp2.RequestHandler):
     def get(self):
         try:
             page = self.request.path
-            print 'attempting to access______'
             page=page[page.find("/")+1:page.find(".")]
             page = page.capitalize()
             if page =='Index':
@@ -29,7 +28,6 @@ class IndexHandler(webapp2.RequestHandler):
             template = JINJA_ENVIRONMENT.get_template('template%s'% self.request.path)
             self.response.write(template.render(template_values))
         except:
-            print 'access failed!'
             template_values={
               'title': 'Home',
               'page': 'HOME',
