@@ -1,23 +1,23 @@
 {% extends "template/base.html" %}
-{%block header%}
-<h1>Jose Barcenas</h1>
-<h2>{{title}}</h2>
-{%endblock%}
-
-{%block navigation%}
- {% for url, caption in names%}
- <li><a href = "{{url}}">{{caption}}<span class="sr-only">(current)</span></a></li>
- {% endfor %}
-{%endblock%}
 
 {% block content %}
-<h2>Education</h2>
 <div class="container">
+  <div class="row" id="educationblock">
+    <!--Resume Body-->
+    <div class="col-xs-10">
+        <h3>Education</h3>
+    </div>
+    <!--Sidebar-->
+    <div class="col-xs-2 text-center">
+      <a href="#" class="btn btn-default">Download PDF</a>
+    </div>
+   </div>
+
   <div class="row" id="educationblock">
     <!--Resume Body-->
     <div class="col-md-10">
         <h4>University of Michigan - Ann Arbor, MI</h4>
-        <p><strong>Master of Science in Electrical and Computer Engineering</strong></p> 
+        <p><strong>Master of Science in Electrical and Computer Engineering</strong></p>
         <p>Specialization in Solid State Electronics and Nanotechnology </p>
     </div>
     <!--Sidebar-->
@@ -41,11 +41,17 @@
    </div>
 </div>
 
-<h2>Experience</h2>
 <div class="container">
+  <div class="row" id="educationblock">
+      <div class="col-md-12">
+          <h3>Experience</h3>
+      </div>
+  </div>
+
 <div class="row" id="educationblock">
     <div class="col-md-12">
-        <h4>kVA - Functional Safety Intern [January 2016 - Present]</h4>
+        <h4>kVA - Functional Safety Intern </h4>
+        <h5>January 2016 - Present</h5>
         <ul>
         <li>Assessed repeatability, stability and measurement accuracy of thermal power systems across multiple product
 segments/platforms</li>
@@ -58,7 +64,8 @@ a Chip parts were tested</li>
 
   <div class="row" id="educationblock">
     <div class="col-md-12">
-        <h4>Intel - Thermal and Power Validation Metrology Intern [May 2015 - August 2015]</h4>
+        <h4>Intel - Thermal and Power Validation Metrology Intern </h4>
+        <h5>May 2015 - August 2015</h5>
         <ul>
         <li>Assessed repeatability, stability and measurement accuracy of thermal power systems across multiple product
 segments/platforms</li>
@@ -71,7 +78,8 @@ a Chip parts were tested</li>
 
    <div class="row" id="educationblock">
      <div class="col-md-12">
-        <h4>NSF International - Engineering Intern [January 2015 - April 2015]</h4>
+        <h4>NSF International - Engineering Intern </h4>
+        <h5>January 2015 - April 2015</h5>
         <ul>
         <li>Wrote Visual Basic for Excel scripts to update automotive parts database from multiple sources</li>
         <li>Generate accuracy check reports of database created from multiple sources</li>
@@ -82,7 +90,8 @@ a Chip parts were tested</li>
 
    <div class="row" id="educationblock">
      <div class="col-md-12">
-        <h4>Texas Instruments – Software Engineering Intern [May 2013 – August 2013]</h4>
+        <h4>Texas Instruments – Software Engineering Intern</h4>
+        <h5>May 2013 - August 2013</h5>
         <ul>
         <li>Validate Android DSSComp(Display SubSystem Composition architecture) on Android Kernel 3.8 using a test
 suite on a next generation “Jacinto 6” infotainment processor developed by Texas Instruments</li>
@@ -91,7 +100,5 @@ suite on a next generation “Jacinto 6” infotainment processor developed by T
         </ul>
      </div>
    </div>
-
 </div
-
 {%endblock%}
