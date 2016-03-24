@@ -1,104 +1,213 @@
 {% extends "template/base.html" %}
 
 {% block content %}
-<div class="container">
-  <div class="row" id="educationblock">
-    <!--Resume Body-->
-    <div class="col-xs-10">
-        <h3>Education</h3>
-    </div>
-    <!--Sidebar-->
-    <div class="col-xs-2 text-center">
-      <a href="#" class="btn btn-default">Download PDF</a>
-    </div>
-   </div>
-
-  <div class="row" id="educationblock">
-    <!--Resume Body-->
-    <div class="col-md-10">
-        <h4>University of Michigan - Ann Arbor, MI</h4>
-        <p><strong>Master of Science in Electrical and Computer Engineering</strong></p>
-        <p>Specialization in Solid State Electronics and Nanotechnology </p>
-    </div>
-    <!--Sidebar-->
-    <div class="col-md-2">
-        <h4>GPA: 3.4</h4>
-        <h5>Expected Graduation: April 2016</h5>
-    </div>
-   </div>
-
-   <div class="row" id="educationblock">
-     <div class="col-md-10">
-        <h4>University of North Texas -Denton, TX</h4>
-        <p><strong>Bachelor of Science in Computer Engineering</strong></p>
-        <p>Specialization in VLSI and Electronics</p>
-     </div>
-     <!--Sidebar-->
-     <div class="col-md-2">
-        <h4>GPA: 3.72</h4>
-        <h5>Graduated May 2014</h5>
-     </div>
-   </div>
-</div>
 
 <div class="container">
-  <div class="row" id="educationblock">
-      <div class="col-md-12">
-          <h3>Experience</h3>
-      </div>
+<div class="row">
+  <!-- Education panel -->
+  <div class="col-md-9">
+    <!--panel-->
+    <div class="panel panel-primary">
+     <div class="panel-heading">
+       <h2 class="panel-title">Education  <a href="#" class="btn btn-primary">Download PDF</a></h2>
+     </div>
+     <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2">
+              <img src="static/2color-bluebg.svg" class="img-responsive">
+            </div>
+            <div class="col-md-8">
+              <h4>University of Michigan - Ann Arbor, MI</h4>
+              <p><strong>Master of Science in Electrical and Computer Engineering</strong></p>
+              <p>Specialization in Solid State Electronics and Nanotechnology </p>
+            </div>
+            <div class="col-md-2">
+              <h4>GPA: 3.4</h4>
+              <h5>Expected Graduation: April 2016</h5>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-2">
+            <img src="static/combo_stacked_two-line_blk_0.svg" class="img-responsive">
+          </div>
+          <div class="col-md-8">
+            <h4>University of North Texas -Denton, TX</h4>
+            <p><strong>Bachelor of Science in Computer Engineering</strong></p>
+            <p>Specialization in VLSI and Electronics</p>
+          </div>
+          <div class="col-md-2">
+            <h4>GPA: 3.72</h4>
+            <h5>Graduated May 2014</h5>
+          </div>
+        </div>
+     </div>
+    </div>
   </div>
-
-<div class="row" id="educationblock">
-    <div class="col-md-12">
-        <h4>kVA - Functional Safety Intern </h4>
-        <h5>January 2016 - Present</h5>
-        <ul>
-        <li>Assessed repeatability, stability and measurement accuracy of thermal power systems across multiple product
-segments/platforms</li>
-        <li>Setup thermal power system experiments in a lab setting. Fully Integrated Voltage Regulator(FIVR) and System on
-a Chip parts were tested</li>
-        <li>Automate data collection and analysis using JMP and Python scripts</li>
-        </ul>
-    </div>
-   </div>
-
-  <div class="row" id="educationblock">
-    <div class="col-md-12">
-        <h4>Intel - Thermal and Power Validation Metrology Intern </h4>
-        <h5>May 2015 - August 2015</h5>
-        <ul>
-        <li>Assessed repeatability, stability and measurement accuracy of thermal power systems across multiple product
-segments/platforms</li>
-        <li>Setup thermal power system experiments in a lab setting. Fully Integrated Voltage Regulator(FIVR) and System on
-a Chip parts were tested</li>
-        <li>Automate data collection and analysis using JMP and Python scripts</li>
-        </ul>
-    </div>
-   </div>
-
-   <div class="row" id="educationblock">
-     <div class="col-md-12">
-        <h4>NSF International - Engineering Intern </h4>
-        <h5>January 2015 - April 2015</h5>
-        <ul>
-        <li>Wrote Visual Basic for Excel scripts to update automotive parts database from multiple sources</li>
-        <li>Generate accuracy check reports of database created from multiple sources</li>
-        <li>Audited OEM certification part reports from technicians for website listing</li>
-        </ul>
+  <!-- Skills panel -->
+  <div class="col-md-3">
+    <!--panel-->
+    <div class="panel panel-primary">
+     <div class="panel-heading">
+       <h2 class="panel-title">Skills</h2>
      </div>
-   </div>
+     <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+              <h5>Programming Languages</h5>
+              <ul>
+                <li>Python</li>
+                <li>C++</li>
+                <li>Visual Basic</li>
+              </ul>
+              <hr/>
+              <h5>Web Development</h5>
+              <ul>
+                <li>Javascript</li>
+                <li>PHP</li>
+                <li>Google App Engine</li>
+                <li>SQL</li>
+              </ul>
 
-   <div class="row" id="educationblock">
-     <div class="col-md-12">
-        <h4>Texas Instruments – Software Engineering Intern</h4>
-        <h5>May 2013 - August 2013</h5>
-        <ul>
-        <li>Validate Android DSSComp(Display SubSystem Composition architecture) on Android Kernel 3.8 using a test
-suite on a next generation “Jacinto 6” infotainment processor developed by Texas Instruments</li>
-        <li>Update Design Specification Document for Android DSSComp</li>
-        <li>Add new test cases to the test suite</li>
-        </ul>
+            </div>
+        </div>
      </div>
-   </div>
-</div
+    </div>
+  </div>
+</div>
+<div class ="row">
+  <!-- Experience panel -->
+  <div class="col-md-7">
+    <div class="panel panel-primary">
+     <div class="panel-heading">
+       <h2 class="panel-title">Experience</h2>
+     </div>
+     <div class="panel-body">
+        <div class="row row-bottom-margin">
+            <div class="col-md-8">
+              <h4>kVA</h4>
+              <p><strong>Functional Safety Intern</strong></p>
+            </div>
+            <div class="col-md-4">
+              <h5>Royal Oak, MI</h5>
+              <p>January 2016 - Present</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <li>Assisted with Hardware Analysis on an autonomous vehicle solution for a client. Specifically, Failures in Time(FIT) rate calculation of power management integrated circuits and microcontrollers</li>
+              <li>Generated Presentation Slides for writing functional safety requirements. Fault Tree Analysis and Boilerplates were discussed were discussed as techniques to derive requirements</li>
+              <li>Supported further roles..</li>
+            </ul>
+          </div>
+        </div>
+        <!-- divider line-->
+        <hr />
+        <!-- divider line-->
+        <div class="row">
+            <div class="col-md-8">
+              <h4>Intel</h4>
+              <p><strong>Thermal and Power Validation Metrology Intern</strong></p>
+            </div>
+            <div class="col-md-4">
+              <h5>Hillsboro, OR</h5>
+              <p>May 2015 - August 2015</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <li>Assessed repeatability, stability and measurement accuracy of thermal power systems across multiple product
+      segments/platforms</li>
+              <li>Setup thermal power system experiments in a lab setting. Fully Integrated Voltage Regulator(FIVR) and System on
+      a Chip parts were tested</li>
+              <li>Automate data collection and analysis using JMP and Python scripts</li>
+            </ul>
+          </div>
+        </div>
+        <!-- divider line-->
+        <hr />
+        <!-- divider line-->
+        <div class="row">
+            <div class="col-md-8">
+              <h4>NSF International</h4>
+              <p><strong>Engineering Intern </strong></p>
+            </div>
+            <div class="col-md-4">
+              <h5>Ann Arbor, MI</h5>
+              <p>January 2015 - April 2015</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <li>Wrote Visual Basic for Excel scripts to update automotive parts database from multiple sources</li>
+              <li>Generate accuracy check reports of database created from multiple sources</li>
+              <li>Audited OEM certification part reports from technicians for website listing</li>
+            </ul>
+          </div>
+        </div>
+        <!-- divider line-->
+        <hr />
+        <!-- divider line-->
+        <div class="row">
+            <div class="col-md-8">
+              <h4>Texas Instruments</h4>
+              <p><strong>Software Engineering Intern</strong></p>
+            </div>
+            <div class="col-md-4">
+              <h5>Dallas, TX</h5>
+              <p>May 2013 - August 2013</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <li>Validate Android DSSComp(Display SubSystem Composition architecture) on 
+                Android Kernel 3.8 using a test suite on a next generation “Jacinto 6” infotainment processor developed by Texas Instruments</li>
+              <li>Update design specification document for Android DSSComp</li>
+              <li>Add new test cases to the test suite</li>
+        </ul>
+          </div>
+        </div>
+     </div>
+    </div>
+  </div>
+  <!-- Projects panel -->
+  <div class="col-sm-5">
+    <!--panel-->
+    <div class="panel panel-primary">
+     <div class="panel-heading">
+       <h2 class="panel-title">Course Projects and Research</h2>
+     </div>
+     <div class="panel-body">
+
+        <div class="row">
+            <div class="col-md-12">
+              <h4>Silicon Wafer Fabrication [Fall 2014]</h4>
+              <p>Fabricated and tested polycrystalline Si gate, n-channel enhancement Si Metal Oxide Semiconductor Field Effect
+            Transistors (MOSFETs) and related devices in the Lurie Nanofabrication Facility. Fabrication technology includes
+            lithography, etching, deposition, oxidation, diffusion, and annealing</p>
+            <hr/>
+              <h4>Report on Active Pixel Sensors for X-ray Imaging[Fall 2013 – Spring 2014]</h4>
+              <p>Explore X-ray digital imaging techniques, focusing on Active Pixel Sensors(APS) arrays. Thin film transistor circuit
+            architecture explored along with operation and properties at the circuit level. Noise and Quantum Efficiency metrics
+            of APS compared to Passive Pixel Sensor arrays were also explored.</p>
+             <hr />
+               <h4>Sentaurus Simulation for Junctionless Transistor [Spring 2015]</h4>
+              <p>Design a double gate n-channel junctionless transistor to maintain Drain Induced Barrier Lowering less
+                than 50mV/V and subthreshold slope below 70mV/dec. Gate length, oxide thickness and doping levels
+                were optimized to achieve the design goals.</p>
+            </div>
+        </div>
+       
+
+        
+
+     </div>
+    </div>
+  </div>
+</div>
+</div>
 {%endblock%}

@@ -6,53 +6,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{title}}</title>
 	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-social.css" >
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-social.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="css/mystylesheet.css" />
-<!-- SimplexTheme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/mystylesheet.css" />
+	<!-- SimplexTheme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" >
 </head>
 <body>
 
 <div class="container">
-	<div class="navbar-wrapper">
-	<div class="navbar navbar-inverse navbar-fixed-top bg-faded">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcollapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand">Jose Barcenas</a>
-        </div>
+<nav class="navbar navbar-inverse navbar-transparent navbar-fixed-top nav-wrapper bg-faded">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" >Jose Barcenas</a>
+    </div>
 
-        <div class="collapse navbar-collapse" id="navcollapse" aria-expanded="false" style="height: 3px;">
-          <ul class="nav navbar-nav">
-						{% for url, caption in names%}
-						{% if caption == title %}
-						  <li class="active"><a href = "{{url}}">{{caption}}<span class="sr-only">(current)</span></a></li>
-					    {% else %}
-							<li><a href = "{{url}}">{{caption}}<span class="sr-only">(current)</span></a></li>
-					  {%endif%}
-					  {% endfor %}
-          </ul>
-					<ul class="nav navbar-nav navbar-right">
-					 <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-					 <li><i class="fa fa-linkedin-square fa-3x"></i></li>
-					</ul>
-	      </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        {% for url, caption in names%}
+			{% if caption == title %}
+			  <li class="active"><a href = "{{url}}">{{caption}}<span class="sr-only">(current)</span></a></li>
+		    {% else %}
+			  <li><a href = "{{url}}">{{caption}}<span class="sr-only">(current)<span></a></li>
+		    {%endif%}
+		{% endfor %}
+      </ul>
+    </div>
+</nav>
+</div>
 
-	    </div>
-	  </div>
-</div>
-<div id="wrap">
-	{% block content%}
-	{% endblock %}
-</div>
-</div>
+
+{% block content%}
+{% endblock %}
+
 
 
 <div class="panel panel-default">
@@ -63,5 +56,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
-		<script src="js/myfunctions.js"></script>
+	<script src="js/myfunctions.js"></script>
 </html>
