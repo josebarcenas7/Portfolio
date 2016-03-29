@@ -1,12 +1,88 @@
 body {
   padding-bottom: 20px;
-  padding-top: 70px;
+  /* property for padding around navbar*/
+  padding-top: 95px;
+  /*background-color:#3E0903 !important;/* Farmhouse Red */
+  min-width: 100%;
+  min-height: 100%;
+
+  background: url("/static/1638851.jpg") no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+
 }
+
+.social_media{
+  text-align: center;
+}
+/*
+.pull-center {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}*/
+/*
+#bs-example-navbar-collapse-2{
+  position: relative;
+} */
+
+/*
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+*/
+
+
+.navbar-brand{
+	display:none;
+}
+
+.img-size{
+	height: 90px;
+	width: 96px;
+}
+
+.logo_img{
+  height: 90px;
+  width: 90px;
+}
+
+/*---------------Transparent panel rules---------------- */
+.panel-transparent {
+  background: none!important;
+}
+/*
+.panel-transparent .panel-heading{
+    background: rgba(122, 130, 136, 0.2)!important;
+} */
+
+.panel-transparent .panel-body{
+    background: rgba(46, 51, 56, 0.2)!important;
+}
+
+/*---------------Transparent panel rules---------------- */
+
+
+/*
+.container{
+ opacity:0.6;
+}*/
 
 .btn{
-  float:right;
+  float:left;
 }
 
+.navbar{
+  font-size:15px !important;
+  min-height:50px ;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -26,6 +102,12 @@ body {
   height: 40px;
   background-color: #f5f5f5;
 }
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.download-btn{
+	padding:15px;
+}
 
 /*working row margin class rules*/
 .row-bottom-margin {
@@ -44,23 +126,27 @@ li {
 	margin-top:3px !important; */
 }
 
+
 hr{
 	border-top: 2px solid !important;
 }
-
-@media screen and (max-width: 480px) {
+/*working media rules for cell phones (galaxy phones)*/
+@media screen and (max-width: 360px) {
     body {
-        background-color: #A92D13 !important;
-        background:white;
+        padding-top: 50px;
+    }
+    .brand-font{
+    	display:none;
+    }
+    .navbar-brand{
+    	display:inline !important;
+    }
+    .navbar{
+    	font-size:20px !important;
+   	    min-height:40px ;
     }
 }
-@media screen and (max-width: 750px) {
-    body {
-        background-color: black ;
-        background:white;
 
-    }
-}
 @media screen and (max-width: 1000px) {
     body {
         background-color: red ;
@@ -68,3 +154,57 @@ hr{
 
     }
 }
+
+@media screen and (max-width: 768px) /* @grid-float-breakpoint -1 */
+{
+    /*
+    .navbar-fixed-top
+    {
+    position: relative;
+    top: auto;
+    } */
+}
+
+
+.img-center {
+  margin:0 auto;
+}
+
+/*------------Img fade in ---------------*/
+.index_img{
+    -webkit-animation: fadein 2.5s; /* Safari and Chrome */
+    -moz-animation: fadein 2.5s; /* Firefox */
+    -ms-animation: fadein 2.5s; /* Internet Explorer */
+    -o-animation: fadein 2.5s; /* Opera */
+    animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}​
+
+/* Opera */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}​
+/*------------Img fade in ---------------*/
