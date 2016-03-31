@@ -36,6 +36,13 @@ body {
 .social_footer{
   display:none;
 }
+
+.fa-style-footer {
+  display:none;
+  float: right;
+  margin: 4px;
+  color: #ebebeb;
+}
 /*-----Social Media Icon Rules----*/
 
 .mobile-list{
@@ -131,6 +138,7 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #4e5d6c;
+  display:inline-block;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -194,6 +202,9 @@ hr{
     .social_footer{
       display:block !important;
 
+    }
+    .fa-style-footer {
+      display:inline-block !important;
     }
 }
 
