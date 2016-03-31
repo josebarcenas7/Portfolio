@@ -2,25 +2,56 @@
 
 {% block content %}
 <!-- ****************~~~Sidebar~~~~************** -->
+
+
+<script>
+$(document).ready(function(){
+ $('.btn-mobilelist').click(function() {
+  $('.chevron').toggleClass('fa-chevron-right');
+  $('.chevron').toggleClass('fa-chevron-down');
+});
+});
+</script>
+
 <div class="container" id="projects-content">
   <div class="row">
-    <div class="col-md-2">
-      <ul class="nav nav-pills head-menu">
-        <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true">About</a></li>
-        <li class=""><a href="#dcdc" data-toggle="tab" aria-expanded="false">Power Electronics</a></li>
-        <li class=""><a href="#silicon" data-toggle="tab" aria-expanded="false">Solid State</a></li>
-        <li class=""><a href="#vfead" data-toggle="tab" aria-expanded="false">Senior Capstone Project</a></li>
-        <li class=""><a href="#intel" data-toggle="tab" aria-expanded="false">Internships</a></li>
-        <li class=""><a href="#research" data-toggle="tab" aria-expanded="false">Research</a></li>
-        <li class=""><a href="#sm" data-toggle="tab" aria-expanded="false">Presentations</a></li>
-      </ul>
-    </div>
+        <div class="col-md-2 regular-list">
+        <ul class="nav nav-pills head-menu">
+          <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true">About</a></li>
+          <li class=""><a href="#dcdc" data-toggle="tab" aria-expanded="false">Power Electronics</a></li>
+          <li class=""><a href="#silicon" data-toggle="tab" aria-expanded="false">Solid State</a></li>
+          <li class=""><a href="#vfead" data-toggle="tab" aria-expanded="false">Senior Capstone Project</a></li>
+          <li class=""><a href="#intel" data-toggle="tab" aria-expanded="false">Internships</a></li>
+          <li class=""><a href="#research" data-toggle="tab" aria-expanded="false">Research</a></li>
+          <li class=""><a href="#sm" data-toggle="tab" aria-expanded="false">Presentations</a></li>
+        </ul>
+      </div>
+        <div class="col-md-2 mobile-list">
+        <button class="pure-button btn-mobilelist" type="button" data-toggle="collapse"
+        data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-style fa-list"></i>
+          Project List <i class="fa fa-style fa-chevron-right"></i>
+        </button>
+          <div class="collapse" id="collapseExample">
+          <div class="card card-block">
+          <ul class="nav nav-pills nav-stacked head-menu">
+          <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true">About</a></li>
+          <li class=""><a href="#dcdc" data-toggle="tab" aria-expanded="false">Power Electronics</a></li>
+          <li class=""><a href="#silicon" data-toggle="tab" aria-expanded="false">Solid State</a></li>
+          <li class=""><a href="#vfead" data-toggle="tab" aria-expanded="false">Senior Capstone Project</a></li>
+          <li class=""><a href="#intel" data-toggle="tab" aria-expanded="false">Internships</a></li>
+          <li class=""><a href="#research" data-toggle="tab" aria-expanded="false">Research</a></li>
+          <li class=""><a href="#sm" data-toggle="tab" aria-expanded="false">Presentations</a></li>
+        </ul>
+        </div>
+        </div>
+        </div>
 
     <!-- ****************~~~Content~~~~************** -->
     <div class="col-md-10 ">
+
       <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="home">
-          <h1>Projects</h1>
+          <h1 class="projects-heading">Projects</h1>
           <p>My projects page includes work I’ve done for classes and internships.
             The projects span a wide spectrum of disciplines, from software development
             to silicon wafer processing</p>
@@ -120,4 +151,5 @@
     </div>
   </div>
 </div>
+
 {%endblock%}
