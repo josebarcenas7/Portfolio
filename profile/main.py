@@ -39,11 +39,11 @@ class IndexHandler(webapp2.RequestHandler):
             #outstr = template.render(temp, { })
             #self.response.out.write(outstr)
 
-
 app = webapp2.WSGIApplication([
     ('/', IndexHandler),
     ('/index.html', IndexHandler),
     ('/projects.html', IndexHandler),
     ('/contact.html', IndexHandler),
+    ('/thankyou.html', IndexHandler),
     ('/resume.html', IndexHandler)
 ], debug=True)

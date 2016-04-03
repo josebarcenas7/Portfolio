@@ -4,6 +4,7 @@ def get_names():
     names = []
     files = os.listdir("template/")
     files.remove('base.html')
+    files.remove('thankyou.html')
     print "-------", files
     #move index to the front of the list, so it's always in the first position
     #of the nav bar

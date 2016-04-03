@@ -4,15 +4,6 @@
 <!-- ****************~~~Sidebar~~~~************** -->
 
 
-<script>
-$(document).ready(function(){
- $('.btn-mobilelist').click(function() {
-  $('.chevron').toggleClass('fa-chevron-right');
-  $('.chevron').toggleClass('fa-chevron-down');
-});
-});
-</script>
-
 <div class="container" id="projects-content">
   <div class="row">
         <div class="col-md-2 regular-list">
@@ -29,7 +20,7 @@ $(document).ready(function(){
         <div class="col-md-2 mobile-list">
         <button class="pure-button btn-mobilelist" type="button" data-toggle="collapse"
         data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-style fa-list"></i>
-          Project List <i class="fa fa-style fa-chevron-right"></i>
+          Project List <i class="fa fa-style chevron fa-chevron-right"></i>
         </button>
           <div class="collapse" id="collapseExample">
           <div class="card card-block">
@@ -70,9 +61,6 @@ $(document).ready(function(){
             After the class ended, I redesigned the PCB to make it smaller and achieve the output current closer to 2 A. Testing is ongoing once I acquire a power supply and an electronic load unit.
             (picture slide show)
           </p>
-
-          <div id="graph">
-          </div>
           
         </div>
 
@@ -81,7 +69,7 @@ $(document).ready(function(){
           <h3>About</h3>
           <p>
             This project was a requirement for EECS 423 Solid State Device Laboratory with Professor Jerzy Kanicki
-            Goal of this project was to create a working n-type transistors on a silicon wafer. Fabrication labs were held in the Lurie Nanofabrication Facility (include link). Methods used included:
+            Goal of this project was to create a working n-type transistors on a silicon wafer. Fabrication labs were held in the <a href="https://lnf.umich.edu/" target="_blank">Lurie Nanofabrication Facility</a>. Methods used included:
           </p>
           <ul>
             <li>
@@ -101,6 +89,9 @@ $(document).ready(function(){
             </li>
           </ul>
           </p>
+          <div id="graph">
+          </div>
+
         </div>
         <div class="tab-pane fade" id="vfead">
           <h2>Variable Frequency Electro-Acoustic Device</h2>

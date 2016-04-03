@@ -2,30 +2,55 @@
 
 {% block content %}
 <div class="container">
-  <form class="pure-form">
+<form class="pure-form" action="https://docs.google.com/forms/d/1RMSyIW6VeZh9s-oIIkrqA267fI6sVknjwxmdZkmYuOc/formResponse" method="POST" id="ss-form" target="_self" 
+onsubmit=""><ol style="padding-left: 0"> 
     <fieldset>
       <h2>Contact Me</h2>
       <div class="form-group">
         <label for="inputName" class="col-lg-2 control-label">Your Name</label>
         <div class="col-lg-10">
-          <input class="form-control" id="inputName" placeholder="Name" type="text">
+          <input class="form-control" id="name" placeholder="Name" type="text" name="name">
         </div>
       </div>
       <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Your Email</label>
         <div class="col-lg-10">
-          <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+          <input class="form-control" id="email" placeholder="Email" type="text" name="email" required>
         </div>
       </div>
       <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Message</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea" placeholder="Enter your message or comment here"></textarea>
+        <textarea class="form-control" rows="3" id="entry_839337160" placeholder="Enter your message or comment here" name="entry.839337160"></textarea>
       </div>
     </div>
     </fieldset>
-    <button type="submit" class="pure-button contact-submit">Send Message</button>
+    <button type="submit" onclick="postContactToGoogle()" class="pure-button contact-submit">Send Message!</button>
+    <p class="text-success">{{success}}</p>
+    <p class="text-info">{{fail}}</p>
   </form>
 </div>
 
+<script>
+function postContactToGoogle() {
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var msg = $('#msg').val();
+            $.ajax({
+                url: "https://docs.google.com/forms/d/1RMSyIW6VeZh9s-oIIkrqA267fI6sVknjwxmdZkmYuOc/formResponse",
+                data: { "entry_1894920159": name, "entry_1045781291":email, "entry_839337160": msg
+                 },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function () {
+                        window.location.replace("thankyou.html");
+                    },
+                    200: function () {
+                        window.location.replace("thankyou.html");
+                    }
+                }
+            });
+    }
+</script>
 {%endblock%}
