@@ -81,6 +81,15 @@ body {
   font-size: 16px;
 }
 
+.navbar-nav li a{
+  color: #BBBBBB !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a{
+  color: #FFFFFF !important;
+  border-bottom: 4px solid #df691a;
+  background: rgba(0,0,0,.2) !important;
+}
+
 .navbar-brand{
 	display:none;
 }
@@ -88,6 +97,11 @@ body {
 .img-size{
 	height: 90px;
 	width: 96px;
+}
+
+.container {
+  box-shadow: 0 0 30px black !important;
+  padding:0 15px 0 15px !important;
 }
 
 .logo_img{
@@ -101,11 +115,13 @@ body {
   color: white !important;
   background-color: #485563 !important;
 }
-
+.project-thumbnail{
+  height:90px;
+}
+.slide-content{
+  width:800px !important;
+}
 /*--------------Project Page rules-------------------*/
-
-
-
 
 
 /*--------------Contact Page rules-------------------*/
@@ -116,31 +132,37 @@ body {
 }
 /*--------------Contact Page rules-------------------*/
 
+/*--------------Table rules*-------------------------*/
+.table>tbody>tr>td{
+    border: 1px solid black !important;
+}
+.table{
+  background-color:#314554;
+}
 
+.equation{
+    display: block;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*--------------Table rules*-------------------------*/
 
 /*---------------Transparent panel rules(Resume page)---------------- */
 .panel-transparent {
   background: none!important;
 }
-/*
-.panel-transparent .panel-heading{
-    background: rgba(122, 130, 136, 0.2)!important;
-} */
 
 .panel-transparent .panel-body{
-    background: rgba(46, 51, 56, 0.2)!important;
+    background: rgba(1,1,1,.4)!important;
 }
 
 /*---------------Transparent panel rules---------------- */
 
-
-/*
-.container{
- opacity:0.6;
-}*/
-
-.btn{
-  float:left;
+object{
+  max-width: 100%;
 }
 
 .navbar{
@@ -148,6 +170,11 @@ body {
   min-height: 50px ;
   font-weight: bold;
 }
+
+.navbar-default{
+  background:url('/static/graybackground.jpg') !important;
+}
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -165,7 +192,7 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #4e5d6c;
+  background: url("/static/graybackground.jpg");
   display:inline-block;
 }
 .lead {
@@ -188,19 +215,17 @@ h5 {
 	margin-bottom: 5px !important;
 	margin-top: 5px !important;
 }
-li {
-	/*
-	height: 10px;
-	margin-bottom: 3px !important;
-	margin-top:3px !important; */
-}
 
 
 hr{
 	border-top: 2px solid !important;
 }
-/*working media rules for cell phones (galaxy phones)*/
-@media screen and (max-width: 360px) {
+
+.mobile-pdf{
+  display:none;
+}
+/*working media rules for cell phones (iphone 6 is max width)*/
+@media screen and (max-width: 375px) {
     body {
       padding-top: 35px;
     }
@@ -232,12 +257,19 @@ hr{
     .carousel-indicator{
       bottom: 1px !important;
     }
-    p span { 
-      background: none !important
+    p span {
+      background: none !important;
     }
-    h1 span { 
-      background: none !important
+    h1 span {
+      background: none !important;
     }
+    .mobile-pdf{
+      display:block !important;
+    }
+    .nonmobile-pdf{
+      display:none !important;
+    }
+
 }
 
 @media screen and (max-width: 770px) /* @grid-float-breakpoint -1 */
@@ -253,15 +285,8 @@ hr{
       display:inline-block !important;
     }
     .head-menu{
-      font-size: 12px !important;
+      font-size: 14px !important;
     }
-}
-
-@media screen and (max-width: 1280px) {
-    body {
-
-    }
-
 }
 
 
@@ -269,50 +294,7 @@ hr{
   margin:0 auto;
 }
 
-/*------------Img fade in ---------------*/
-.index_img{
-    -webkit-animation: fadein 2.5s; /* Safari and Chrome */
-    -moz-animation: fadein 2.5s; /* Firefox */
-    -ms-animation: fadein 2.5s; /* Internet Explorer */
-    -o-animation: fadein 2.5s; /* Opera */
-    animation: fadein 2.5s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari and Chrome */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}​
-
-/* Opera */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}​
-/*------------Img fade in ---------------*/
-
 /* Carousel base class */
-.carousel {
-  height: 200px;
-  margin-bottom: 60px;
-}
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
@@ -328,14 +310,13 @@ hr{
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 100%;
 }
 
-p span { 
+p span {
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.4);
 }
-h1 span { 
+h1 span {
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.4);
 }

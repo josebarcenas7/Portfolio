@@ -13,7 +13,6 @@
           <li class=""><a href="#silicon" data-toggle="tab" aria-expanded="false">Solid State</a></li>
           <li class=""><a href="#vfead" data-toggle="tab" aria-expanded="false">Senior Capstone Project</a></li>
           <li class=""><a href="#intel" data-toggle="tab" aria-expanded="false">Internships</a></li>
-          <li class=""><a href="#research" data-toggle="tab" aria-expanded="false">Research</a></li>
           <li class=""><a href="#sm" data-toggle="tab" aria-expanded="false">Presentations</a></li>
         </ul>
       </div>
@@ -23,17 +22,16 @@
           Project List <i class="fa fa-style chevron fa-chevron-right"></i>
         </button>
           <div class="collapse" id="collapseExample">
-          <div class="card card-block">
-          <ul class="nav nav-pills nav-stacked head-menu">
-          <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true">About</a></li>
-          <li class=""><a href="#dcdc" data-toggle="tab" aria-expanded="false">Power Electronics</a></li>
-          <li class=""><a href="#silicon" data-toggle="tab" aria-expanded="false">Solid State</a></li>
-          <li class=""><a href="#vfead" data-toggle="tab" aria-expanded="false">Senior Capstone Project</a></li>
-          <li class=""><a href="#intel" data-toggle="tab" aria-expanded="false">Internships</a></li>
-          <li class=""><a href="#research" data-toggle="tab" aria-expanded="false">Research</a></li>
-          <li class=""><a href="#sm" data-toggle="tab" aria-expanded="false">Presentations</a></li>
-        </ul>
-        </div>
+            <div class="card card-block">
+            <ul class="nav nav-pills nav-stacked head-menu">
+              <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true">About</a></li>
+              <li class=""><a href="#dcdc" data-toggle="tab" aria-expanded="false">Power Electronics</a></li>
+              <li class=""><a href="#silicon" data-toggle="tab" aria-expanded="false">Solid State</a></li>
+              <li class=""><a href="#vfead" data-toggle="tab" aria-expanded="false">Senior Capstone Project</a></li>
+              <li class=""><a href="#intel" data-toggle="tab" aria-expanded="false">Internships</a></li>
+              <li class=""><a href="#sm" data-toggle="tab" aria-expanded="false">Presentations</a></li>
+            </ul>
+            </div>
         </div>
         </div>
 
@@ -48,28 +46,88 @@
             to silicon wafer processing</p>
         </div>
         <div class="tab-pane fade" id="dcdc">
-          <h2>DC-DC Power Converter</h2>
+          <h2>EECS 418/Fiat Chrysler Class Project</h2>
           <h3>About</h3>
           <p>
-            This project was a requirement for EECS 418 Power Electronics (include link to class website), with Prof. Heath Hoffman.</p>
+            This project was a requirement for <a href="https://www.eecs.umich.edu/eecs/academics/courses/eecs-418.html" target="_blank">EECS 418 Power Electronics</a>, with Prof. Heath Hoffman.</p>
           </p>
-            Goal of this project was to design and assemble a PCB to be used as a switching-mode power supply. This project was developed in collaboration with FCA (include link) motors, they supplied the budget for the parts and the PCB Board, they also reviewed our design and provided guidance.
-            Technical Specs and Requirements
-            (include tech specs and requirements from FCA)
+            The objective of this class project was to design and build a DC to DC converter that
+            mimics a lower scale voltage stabilizer module used in vehicle stop/start applications.
+            The purpose of the DC to DC converter (voltage stabilizer module) is to prevent
+            customer functions from reacting negatively when the engine restarts and causes a
+            severe load.
           </p>
+          <h3> Characteristics of Boost Converter design</h3>
+          <div class="table-responsive">
+          <table class="table">
+          <tbody>
+          <tr>
+            <td>Minimum input voltage</td>
+            <td>6V</td>
+          </tr>
+          <tr>
+            <td>Boosted output voltage level</td>
+            <td>12V</td>
+          </tr>
+          <tr>
+            <td>Output power @ 12 V</td>
+            <td>24W</td>
+          </tr>
+          <tr>
+            <td>Switching Frequency</td>
+            <td>200 kHz or higher</td>
+          </tr>
+          <tr>
+            <td>Peak Inductor Current ripple:<br><img class="equation" src="https://latex.codecogs.com/gif.latex?\frac{\Delta&space;I_{L}}{I_{L}}" title="\frac{\Delta I_{L}}{I_{L}}" /></td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>Peak Output voltage ripple:<br><img class="equation" src="https://latex.codecogs.com/gif.latex?\frac{\Delta&space;V_{o}}{V_{o}}" title="\frac{\Delta V_{o}}{V_{o}}" /></td>
+            <td>5%</td>
+          </tr>
+          <tr>
+            <td>Efficiency</td>
+            <td>&gt;85%</td>
+          </tr>
+          <tr>
+            <td>Reverse battery protection</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Voltage control loop</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Current control loop</td>
+            <td>Optional</td>
+          </tr>
+          <tr>
+            <td>Mode switching circuit</td>
+            <td>Optional</td>
+          </tr>
+          </tbody>
+          </table>
+          </div>
+          <p>Our design ended up getting 97% efficiency. Input was measured at 5.89 V and 2.58 A, output was 12 V and 1.314 A. After the class ended, I redesigned the PCB to make it smaller and achieve the output current closer to 2 A.</p>
           <p>
-            After the class ended, I redesigned the PCB to make it smaller and achieve the output current closer to 2 A. Testing is ongoing once I acquire a power supply and an electronic load unit.
-            (picture slide show)
+             Feel free to contact me for more details and a full report on the project!
           </p>
+          <div class="fotorama project-img" data-allowfullscreen="true" data-nav="thumbs">
+             <a href="static/pcb5.jpg" data-caption="PCB Board with soldered components"><img src="static/pcb5.jpg" width="144" height="96"></a>
+             <a href="static/waveform.bmp" data-caption="Oscilloscope data, avg(1)(2) are inputs and avg(3)(4) are outputs"><img src="static/waveform.bmp" width="144" height="96"></a>
+             <a href="static/pcb1.jpg" data-caption="Redesigned PCB board"><img src="static/pcb1.jpg" width="144" height="96"></a>
+          </div>
+
+          
           
         </div>
 
         <div class="tab-pane fade" id="silicon">
-          <h2>Silicon Wafer Processing</h2>
+          <h2>Solid State Lab</h2>
           <h3>About</h3>
           <p>
-            This project was a requirement for EECS 423 Solid State Device Laboratory with Professor Jerzy Kanicki
-            Goal of this project was to create a working n-type transistors on a silicon wafer. Fabrication labs were held in the <a href="https://lnf.umich.edu/" target="_blank">Lurie Nanofabrication Facility</a>. Methods used included:
+            This lab was a requirement for EECS 423 Solid State Device Laboratory with Professor Jerzy Kanicki.
+            Goal of this project was to create working n-type transistors, of varying sizes, on a silicon wafer. Fabrication labs were held in the <a href="https://lnf.umich.edu/" target="_blank">Lurie Nanofabrication Facility</a>. Methods used included:
           </p>
           <ul>
             <li>
@@ -88,60 +146,118 @@
               CVD/PVD
             </li>
           </ul>
+          <p>After the wafer was fabricated, data was collected to correlate the experimental data with theoritical data. Capacitance based on doping concentration and oxide thickness, Voltage threshold based on gate length, and more were calculated</p>
           </p>
+          <p>The following plot includes data taken from the fabricated wafer. The gate-source voltage vs the drain current of the transistors is plotted. The different traces are for the 5 different transistors sizes on the wafer. A slight shift is present as the gate length increases, meaning more voltage is required to "turn on" the transistor with increasing gate length.</p>
           <div id="graph">
           </div>
+          <div class="fotorama project-img" data-allowfullscreen="true" data-nav="thumbs">
+             <a href="static/lnf1.jpg" data-caption="Lab group photo with our completed wafer"><img src="static/lnf1.jpg" width="144" height="96"></a>
+             <a href="static/lnf2.jpg" data-caption="Full 'bunny' suit to prevent small skin and clothing particles from contaminating the clean room"><img src="static/lnf2.jpg" width="144" height="96"></a>
+             <a href="static/wafer.jpg" data-caption="Wafer after the final proccesing step"><img src="static/wafer.jpg" width="144" height="96"></a>
+          </div>
+
 
         </div>
         <div class="tab-pane fade" id="vfead">
           <h2>Variable Frequency Electro-Acoustic Device</h2>
           <h3>About</h3>
-          <p>The project was a yearlong project for my senior design capstone course at
-            the University of North Texas. It was a major requirement for my Bachelors of
+          <p>
+           My senior design project was a year-long project while I was an undergraduate student at the  University of North Texas.
+            It was a major requirement for my Bachelors of
             Science in Computer Engineering.
             Our team researched solutions for Sensorineural hearing loss(SHL). We developed a hearing aid
             that was capable of compensating the inaudible range of any user.
             This could be achieved by having the user customize the settings of our device on first use.
-            Tech Specs
-            Insert BOM
-            (insert Slide Show)(Find way to imbed JPG on to site)
+            <div class="fotorama project-img" data-allowfullscreen="true" data-nav="thumbs">
+             <a href="static/2014DesignDay13.jpg" data-caption="Senior Design Day"><img src="static/2014DesignDay13.jpg" width="144" height="96"></a>
+             <a href="static/2014DesignDay21.jpg" data-caption="Senior Design Day"><img src="static/2014DesignDay21.jpg" width="144" height="96"></a>
+             <a href="static/MediumWare_Poster.jpg" data-caption="Design Poster"><img src="static/MediumWare_Poster.jpg" width="144" height="96"></a>
+          </div>
           </p>
         </div>
         <div class="tab-pane fade" id="intel">
           <h2>Thermal Power Validation Group, Metrology Capability Study</h2>
           <h3>About</h3>
           <p>
-          This project was my main assignment during my summer internship with Intel (include link).
+          This project was my main assignment during my summer internship with <a href="intel.com" target="_blank">Intel</a>.
           I worked on a variety of Intel products, setting up test environments and running specific workloads to gather power and thermal data. I worked with python scripts to automate the processes.
           <h3>Goals</h3>
-          Identify principal sources of variation; quantify and minimize their contribution to overall variability of power and thermal measurements performed on a TPV system
-          Quantify and compare total system-to-system variability for thermal and power measurements across multiple product segments/platforms (client and server)
+          Identify principal sources of variation; quantify and minimize their contribution to overall variability of power and thermal measurements performed on a TPV system.
+          Quantify and compare total system-to-system variability for thermal and power measurements across multiple product segments/platforms (client and server).
           Results and Details are under NDA
           </p>
-        </div>
-        <div class="tab-pane fade" id="research">
-          <h2>Research</h2>
-          <p>
-            The following are slides from presentations I have given
-            <ul>
-              <li>Oceanography</li>
-              <li>X-Ray Imaging</li>
-              <li>Gallium Nitride Growth</li>
-              <li>GPU's and Autonomous vehicles</li>
-            </ul>
-          </p>
-        </div>
+
+          <div class="fotorama project-img" data-allowfullscreen="true" data-nav="thumbs">
+             <a href="static/intel_workspace.jpg" data-caption="Workspace at my Internship"><img src="static/intel_workspace.jpg" width="144" height="96"></a>
+             <a href="static/intel.jpg" data-caption="One of the platforms I worked on"><img src="static/intel.jpg" width="144" height="96"></a>
+          </div>
+
+          </div>
         <div class="tab-pane fade" id="sm">
           <h2>Smaller Projects</h2>
+          
           <p>
             The following are slides from presentations I have given
-            <ul>
-              <li>Oceanography</li>
-              <li>X-Ray Imaging</li>
-              <li>Gallium Nitride Growth</li>
-              <li>GPU's and Autonomous vehicles</li>
-            </ul>
           </p>
+
+          <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                     Physical Oceanography
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <object class="nonmobile-pdf"data="static/AOSS421Presentation.pdf" type="application/pdf" width="100%" height="400px" >
+                  alt : <a href="static/AOSS421Presentation.pdf">test.pdf</a>
+                </object>
+
+                <object class="mobile-pdf" data="static/AOSS421Presentation.pdf" type="application/pdf" width="321" height="360" >
+                  alt : <a href="static/AOSS421Presentation.pdf">test.pdf</a>
+                </object>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    X-Ray Imaging
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <object class="nonmobile-pdf"data="static/512Project.pdf" type="application/pdf" width="100%" height="400px" >
+                  alt : <a href="static/512Project.pdf">test.pdf</a>
+                </object>
+
+                <object class="mobile-pdf" data="static/512Project.pdf" type="application/pdf" width="321" height="360" >
+                  alt : <a href="static/512Project.pdf">test.pdf</a>
+                </object>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Selective Area Growth for Gallium Nitride Devices
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <object class="nonmobile-pdf"data="static/SAGpresentation.pdf" type="application/pdf" width="100%" height="400px" >
+                  alt : <a href="static/SAGpresentation.pdf">test.pdf</a>
+                </object>
+
+                <object class="mobile-pdf" data="static/SAGpresentation.pdf" type="application/pdf" width="321" height="360" >
+                  alt : <a href="static/SAGpresentation.pdf">test.pdf</a>
+                </object>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
