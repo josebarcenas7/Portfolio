@@ -35,6 +35,7 @@ body {
 /*-----Social Media Icon Rules----*/
 .social_header{
   display:block;
+
 }
 .social_header .fa-linkedin-square:hover {
   color: #0094BC;
@@ -52,11 +53,6 @@ body {
   float: right;
   margin: 4px;
   color: #ebebeb;
-}
-
-.linkedin-button-header{
-  margin-top: 10px;
-  margin-right: 10px;
 }
 
 .logo-footer{
@@ -88,6 +84,12 @@ body {
   color: #FFFFFF !important;
   border-bottom: 4px solid #df691a;
   background: rgba(0,0,0,.2) !important;
+}
+
+.linkedin-button-header{
+  margin-top: 10px;
+  margin-right: 10px;
+  color:black!important;
 }
 
 .navbar-brand{

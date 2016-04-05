@@ -23,7 +23,7 @@
 
 	<nav class="navbar navbar-default navbar-fixed-top nav-wrapper bg-faded">
 	    <div class="navbar-header">
-		  <a href="index.html" class="pull-left brand-font"><img src="static/logo.svg" class="img-responsive logo_img"></a>
+		  <a href="index.html" class="pull-left brand-font"><img src="static/logo.svg" alt="logo" class="img-responsive logo_img"></a>
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
 	        <span class="sr-only">Toggle navigation</span>
 	        <span class="icon-bar"></span>
@@ -33,18 +33,20 @@
 	      <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i></a>
 	    </div>
 			<!-- social media icons -->
-			<ul class="nav navbar-nav navbar-right social_header">
-			<a class="pure-button linkedin-button-header" href="https://www.linkedin.com/in/jose-barcenas-46a4255b "target="_blank">
+			<ol class="nav navbar-nav navbar-right social_header">
+			<li>
+			<a class="pure-button linkedin-button-header" href="https://www.linkedin.com/in/jose-barcenas-46a4255b" target="_blank">
 	          Connect with me on <i class="fa fa-style fa-2x fa-linkedin-square"></i>
 	        </a>
-			</ul>
+	        </li>
+			</ol>
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 	      <ul class="nav navbar-nav pull-center nav-list">
 	        {% for url, caption in names%}
 			   {% if caption == title %}
-			   <li class="active"><a href = "{{url}}">{{caption}}<span class="sr-only">(current)</span></a></li>
+			   <li class="active"><a href = "{{url}}">{{caption}}</a></li>
 		        {% else %}
-			   <li><a href = "{{url}}">{{caption}}<span class="sr-only">(current)<span></a></li>
+			   <li><a href = "{{url}}">{{caption}}</a></li>
 		       {%endif%}
 			{% endfor %}
 	      </ul>
@@ -56,22 +58,20 @@
 
 <footer class="footer">
       <div class="container">
-        <p class="lead">Copyright &copy; Jose Barcenas<a href="https://www.linkedin.com/in/jose-barcenas-46a4255b "target="_blank">
+        <p class="lead">Copyright &copy; Jose Barcenas<a href="https://www.linkedin.com/in/jose-barcenas-46a4255b" target="_blank">
 		<i class="fa fa-style-footer fa-2x fa-linkedin-square"></i></a></p>
 
-		<span class="label label-primary">Built with Bootstrap<a href="http://getbootstrap.com/"><img src="static/bootstrapicon.png" class="img-responsive logo-footer"></a></span>
-		<span class="label label-primary">Powered by Google App Engine<a href="https://cloud.google.com/appengine/docs"><img src="static/googleapp.png" class="img-responsive logo-footer"></a></span>
+		<span class="label label-primary">Built with Bootstrap<a href="http://getbootstrap.com/"><img src="static/bootstrapicon.png" alt="bootstrap icon" class="img-responsive logo-footer"></a></span>
+		<span class="label label-primary">Powered by Google App Engine<a href="https://cloud.google.com/appengine/docs"><img src="static/googleapp.png" alt="google icon" class="img-responsive logo-footer"></a></span>
 
       </div>
 </footer>
-
-</body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="js/myfunctions.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-  <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
 	<script src="js/nmosplots.js"></script>
-
+</body>
 </html>
